@@ -1,0 +1,258 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Fonts/Gugi-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://AudioClips/positivesound.mp3" type="AudioStream" id=2]
+[ext_resource path="res://AudioClips/negativesound.mp3" type="AudioStream" id=3]
+
+[sub_resource type="StyleBoxTexture" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[node name="PlayerNumbers" type="GridContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+columns = 5
+
+[node name="Number1" type="Panel" parent="."]
+margin_right = 80.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Number1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "36"
+align = 1
+valign = 1
+
+[node name="Number2" type="Panel" parent="."]
+margin_left = 84.0
+margin_right = 164.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Number2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "36"
+align = 1
+valign = 1
+
+[node name="Number3" type="Panel" parent="."]
+margin_left = 168.0
+margin_right = 248.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Number3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "36"
+align = 1
+valign = 1
+
+[node name="Number4" type="Panel" parent="."]
+margin_left = 252.0
+margin_right = 332.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Number4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "36"
+align = 1
+valign = 1
+
+[node name="Number5" type="Panel" parent="."]
+margin_left = 336.0
+margin_right = 416.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Number5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "36"
+align = 1
+valign = 1
+
+[node name="Number6" type="Panel" parent="."]
+margin_top = 84.0
+margin_right = 80.0
+margin_bottom = 164.0
+rect_min_size = Vector2( 80, 80 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Number6"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "36"
+align = 1
+valign = 1
+
+[node name="Number7" type="Panel" parent="."]
+margin_left = 84.0
+margin_top = 84.0
+margin_right = 164.0
+margin_bottom = 164.0
+rect_min_size = Vector2( 80, 80 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Number7"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "36"
+align = 1
+valign = 1
+
+[node name="Number8" type="Panel" parent="."]
+margin_left = 168.0
+margin_top = 84.0
+margin_right = 248.0
+margin_bottom = 164.0
+rect_min_size = Vector2( 80, 80 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Number8"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "36"
+align = 1
+valign = 1
+
+[node name="Number9" type="Panel" parent="."]
+margin_left = 252.0
+margin_top = 84.0
+margin_right = 332.0
+margin_bottom = 164.0
+rect_min_size = Vector2( 80, 80 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Number9"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "36"
+align = 1
+valign = 1
+
+[node name="Number10" type="Panel" parent="."]
+margin_left = 336.0
+margin_top = 84.0
+margin_right = 416.0
+margin_bottom = 164.0
+rect_min_size = Vector2( 80, 80 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Number10"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "36"
+align = 1
+valign = 1
+
+[node name="Number11" type="Panel" parent="."]
+margin_top = 168.0
+margin_right = 80.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 80, 80 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Number11"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "36"
+align = 1
+valign = 1
+
+[node name="Number12" type="Panel" parent="."]
+margin_left = 84.0
+margin_top = 168.0
+margin_right = 164.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 80, 80 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Number12"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "36"
+align = 1
+valign = 1
+
+[node name="Number13" type="Panel" parent="."]
+margin_left = 168.0
+margin_top = 168.0
+margin_right = 248.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 80, 80 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Number13"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "36"
+align = 1
+valign = 1
+
+[node name="Number14" type="Panel" parent="."]
+margin_left = 252.0
+margin_top = 168.0
+margin_right = 332.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 80, 80 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Number14"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "36"
+align = 1
+valign = 1
+
+[node name="Number15" type="Panel" parent="."]
+margin_left = 336.0
+margin_top = 168.0
+margin_right = 416.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 80, 80 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Number15"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "36"
+align = 1
+valign = 1
+
+[node name="NegativePlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = -5.674
+pitch_scale = 4.0
+
+[node name="PositivePlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )

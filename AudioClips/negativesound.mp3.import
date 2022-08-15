@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/negativesound.mp3-0d36f5c767c70d4917925e0c152624d9.mp3str"
+
+[deps]
+
+source_file="res://AudioClips/negativesound.mp3"
+dest_files=[ "res://.import/negativesound.mp3-0d36f5c767c70d4917925e0c152624d9.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

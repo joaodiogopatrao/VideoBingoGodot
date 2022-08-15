@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/positivesound.mp3-ef8736b4dc10ae388bfb27a6282c96f1.mp3str"
+
+[deps]
+
+source_file="res://AudioClips/positivesound.mp3"
+dest_files=[ "res://.import/positivesound.mp3-ef8736b4dc10ae388bfb27a6282c96f1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

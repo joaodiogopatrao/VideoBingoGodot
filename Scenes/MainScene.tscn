@@ -1,0 +1,380 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://Sprites/sliderfill.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/sliderbackground.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/darkbackground01.jpg" type="Texture" id=4]
+[ext_resource path="res://Sprites/boxbackground01.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/bottomframe.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/particle01.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/pausebutton1.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/bonusline.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/gridbackground.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/playbutton1.png" type="Texture" id=11]
+[ext_resource path="res://Scripts/PickedNumberInd.gd" type="Script" id=12]
+[ext_resource path="res://Scripts/PlayerNumbers.gd" type="Script" id=13]
+[ext_resource path="res://Sprites/middlelineprize.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/bingoprize.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/bottomlineprize.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/toplineprize.png" type="Texture" id=17]
+[ext_resource path="res://Scripts/TextureProgress.gd" type="Script" id=18]
+[ext_resource path="res://Scenes/PlayerNumbers.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/SortedContainer.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Fonts/Gugi-Regular.ttf" type="DynamicFontData" id=21]
+[ext_resource path="res://Fonts/TEKKERS 3 FV.ttf" type="DynamicFontData" id=22]
+[ext_resource path="res://Scenes/spawntube.png" type="Texture" id=23]
+
+[sub_resource type="Environment" id=1]
+background_mode = 4
+ambient_light_color = Color( 0.419608, 0.639216, 0.639216, 1 )
+dof_blur_near_distance = 58.25
+dof_blur_near_transition = 2.18
+dof_blur_near_amount = 0.13
+dof_blur_near_quality = 2
+glow_enabled = true
+glow_intensity = 8.0
+glow_strength = 0.81
+glow_bloom = 0.02
+glow_blend_mode = 0
+glow_hdr_threshold = 0.74
+glow_hdr_luminance_cap = 24.37
+glow_hdr_scale = 0.7
+glow_bicubic_upscale = true
+glow_high_quality = true
+adjustment_enabled = true
+adjustment_contrast = 1.07
+adjustment_saturation = 1.08
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 21 )
+
+[sub_resource type="CanvasItemMaterial" id=3]
+blend_mode = 1
+
+[sub_resource type="ParticlesMaterial" id=4]
+emission_shape = 2
+emission_box_extents = Vector3( 1000, 1000, 100 )
+flag_disable_z = true
+spread = 139.46
+flatness = 0.3
+gravity = Vector3( 3, 3, 0 )
+angular_velocity = 11.27
+angular_velocity_random = 0.11
+orbit_velocity = 0.0
+orbit_velocity_random = 0.01
+angle_random = 0.12
+scale = 0.01
+color = Color( 1, 1, 1, 0.211765 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 35
+font_data = ExtResource( 21 )
+
+[sub_resource type="CanvasItemMaterial" id=6]
+
+[sub_resource type="DynamicFont" id=5]
+size = 220
+outline_size = 1
+use_mipmaps = true
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 35
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 200
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 22 )
+
+[sub_resource type="StyleBoxTexture" id=10]
+
+[node name="Environment" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="BackgroundImage" type="TextureRect" parent="."]
+margin_left = -3.0
+margin_top = -12.0
+margin_right = 1988.0
+margin_bottom = 1110.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="BackgroundImage2" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0.258824 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -24.0
+margin_top = -23.0
+margin_right = 60.0
+margin_bottom = 38.0
+texture = ExtResource( 10 )
+expand = true
+
+[node name="PostProcessEffects" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
+
+[node name="SortedContainer" parent="." instance=ExtResource( 20 )]
+
+[node name="SortedContainerText" type="Label" parent="SortedContainer"]
+margin_left = 818.0
+margin_top = 37.0
+margin_right = 1238.0
+margin_bottom = 78.0
+custom_fonts/font = SubResource( 2 )
+text = "SORTED NUMBERS"
+align = 1
+valign = 1
+
+[node name="ProgressBackground" type="TextureRect" parent="."]
+margin_left = 418.0
+margin_top = 332.0
+margin_right = 1553.0
+margin_bottom = 431.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureProgress" type="TextureProgress" parent="ProgressBackground"]
+modulate = Color( 1, 1, 1.2, 1 )
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 1135.0
+margin_bottom = 98.0
+max_value = 19000.0
+value = 19000.0
+allow_greater = true
+texture_progress = ExtResource( 1 )
+nine_patch_stretch = true
+script = ExtResource( 18 )
+
+[node name="LowerFrame" type="TextureRect" parent="."]
+modulate = Color( 0.92, 1, 1.2, 1 )
+margin_left = -48.0
+margin_top = 24.0
+margin_right = 2029.0
+margin_bottom = 1153.0
+texture = ExtResource( 6 )
+expand = true
+
+[node name="Particles2D" type="Particles2D" parent="."]
+material = SubResource( 3 )
+position = Vector2( 956, 545 )
+amount = 2000
+lifetime = 17.52
+process_material = SubResource( 4 )
+texture = ExtResource( 7 )
+
+[node name="PlayerCard" type="TextureRect" parent="."]
+margin_left = 360.0
+margin_top = 428.0
+margin_right = 967.0
+margin_bottom = 871.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="CardTitle" type="Label" parent="PlayerCard"]
+margin_left = 182.0
+margin_top = 49.0
+margin_right = 422.0
+margin_bottom = 85.0
+custom_fonts/font = SubResource( 8 )
+text = "PLAYER CARD"
+
+[node name="PlayerNumbers" parent="PlayerCard" instance=ExtResource( 19 )]
+margin_left = 66.0
+margin_top = 116.0
+margin_right = -43.0
+margin_bottom = 41.0
+custom_constants/vseparation = 15
+custom_constants/hseparation = 15
+script = ExtResource( 13 )
+
+[node name="TopBonusLine" type="TextureRect" parent="PlayerCard"]
+modulate = Color( 1, 1, 1.3, 1 )
+anchor_left = 0.107
+anchor_top = 0.055
+anchor_right = 0.107
+anchor_bottom = 0.055
+margin_left = -19.949
+margin_top = 101.635
+margin_right = -19.949
+margin_bottom = 157.635
+rect_pivot_offset = Vector2( 250, 28 )
+texture = ExtResource( 9 )
+expand = true
+
+[node name="MiddleBonusLine" type="TextureRect" parent="PlayerCard"]
+modulate = Color( 1, 1, 1.3, 1 )
+anchor_left = 0.108
+anchor_top = 0.336
+anchor_right = 0.108
+anchor_bottom = 0.336
+margin_left = -21.556
+margin_top = 74.152
+margin_right = -21.556
+margin_bottom = 130.152
+rect_pivot_offset = Vector2( 250, 28 )
+texture = ExtResource( 9 )
+expand = true
+
+[node name="BottomBonusLine" type="TextureRect" parent="PlayerCard"]
+modulate = Color( 1, 1, 1.3, 1 )
+anchor_left = 0.107
+anchor_top = 0.609
+anchor_right = 0.107
+anchor_bottom = 0.609
+margin_left = -19.949
+margin_top = 47.213
+margin_right = -19.949
+margin_bottom = 103.213
+rect_pivot_offset = Vector2( 250, 28 )
+texture = ExtResource( 9 )
+expand = true
+
+[node name="PlayButton" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0.921569 )
+margin_left = 599.0
+margin_top = 996.0
+margin_right = 714.0
+margin_bottom = 1079.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 11 )
+flat = true
+expand_icon = true
+
+[node name="StopButton" type="Button" parent="."]
+margin_left = 1271.0
+margin_top = 998.0
+margin_right = 1386.0
+margin_bottom = 1081.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+expand_icon = true
+
+[node name="PickedNumberInd" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0.313726 )
+material = SubResource( 6 )
+margin_left = 862.0
+margin_top = 846.0
+margin_right = 1112.0
+margin_bottom = 1067.0
+rect_pivot_offset = Vector2( 125, 140 )
+custom_constants/shadow_offset_x = 3
+custom_constants/line_spacing = 0
+custom_constants/shadow_offset_y = 6
+custom_constants/shadow_as_outline = 8
+custom_fonts/font = SubResource( 5 )
+text = "37"
+align = 1
+valign = 1
+script = ExtResource( 12 )
+
+[node name="PatternsContainer" type="TextureRect" parent="."]
+margin_left = 986.0
+margin_top = 430.0
+margin_right = 1593.0
+margin_bottom = 873.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="PatternsTitle" type="Label" parent="PatternsContainer"]
+margin_left = 196.0
+margin_top = 49.0
+margin_right = 402.0
+margin_bottom = 90.0
+custom_fonts/font = SubResource( 7 )
+text = "PATTERNS"
+align = 1
+valign = 1
+
+[node name="TopLinePrize" type="TextureRect" parent="PatternsContainer"]
+margin_left = 38.0
+margin_top = 53.0
+margin_right = 319.0
+margin_bottom = 335.0
+texture = ExtResource( 17 )
+expand = true
+
+[node name="MiddleLinePrize" type="TextureRect" parent="PatternsContainer"]
+margin_left = 262.0
+margin_top = 48.0
+margin_right = 547.0
+margin_bottom = 338.0
+texture = ExtResource( 14 )
+expand = true
+
+[node name="BingoPrize" type="TextureRect" parent="PatternsContainer"]
+margin_left = 256.0
+margin_top = 177.0
+margin_right = 553.0
+margin_bottom = 472.0
+texture = ExtResource( 15 )
+expand = true
+
+[node name="BottomLinePrize" type="TextureRect" parent="PatternsContainer"]
+margin_left = 32.0
+margin_top = 171.0
+margin_right = 328.0
+margin_bottom = 477.0
+texture = ExtResource( 16 )
+expand = true
+
+[node name="BonusText" type="Label" parent="."]
+margin_left = -1610.0
+margin_top = 376.0
+margin_right = -30.0
+margin_bottom = 674.0
+custom_colors/font_color = Color( 0.0431373, 1, 0.819608, 1 )
+custom_constants/shadow_offset_x = 6
+custom_constants/line_spacing = 5
+custom_constants/shadow_offset_y = 3
+custom_constants/shadow_as_outline = 5
+custom_fonts/font = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+text = "TOP LINE"
+align = 1
+valign = 1
+
+[node name="BonusTextTween" type="Tween" parent="BonusText"]
+
+[node name="Spawntube" type="Sprite" parent="."]
+position = Vector2( 1782, 173 )
+rotation = -1.5708
+scale = Vector2( 0.268035, 0.191883 )
+texture = ExtResource( 23 )
+
+[node name="Light2D" type="Light2D" parent="Spawntube"]
+position = Vector2( -26.8502, -665.781 )
+scale = Vector2( 1.13834, 3.31899 )
+texture = ExtResource( 7 )
+color = Color( 0.482353, 1, 0.964706, 1 )
+
+[node name="Spawntube2" type="Sprite" parent="."]
+position = Vector2( 1783, 281 )
+rotation = -1.5708
+scale = Vector2( 0.268035, 0.191883 )
+texture = ExtResource( 23 )
+
+[node name="Light2D2" type="Light2D" parent="Spawntube2"]
+position = Vector2( -13.3775, -692.886 )
+scale = Vector2( 1.13834, 3.31899 )
+texture = ExtResource( 7 )
+color = Color( 0.482353, 1, 0.964706, 1 )
+
+[node name="IndicatorLight" type="Light2D" parent="."]
+position = Vector2( 979, 1125 )
+scale = Vector2( 2.01187, 1.42625 )
+texture = ExtResource( 7 )
+energy = 1.42
+
+[connection signal="pressed" from="PlayButton" to="SortedContainer" method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="StopButton" to="SortedContainer" method="_on_StopButton_pressed"]

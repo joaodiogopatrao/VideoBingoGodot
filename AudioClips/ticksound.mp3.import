@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ticksound.mp3-129e868dbdb9ab67576934c3873fbaa9.mp3str"
+
+[deps]
+
+source_file="res://AudioClips/ticksound.mp3"
+dest_files=[ "res://.import/ticksound.mp3-129e868dbdb9ab67576934c3873fbaa9.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

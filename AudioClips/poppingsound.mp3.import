@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/poppingsound.mp3-d0d1b3c6563aa3e9295906375529cc74.mp3str"
+
+[deps]
+
+source_file="res://AudioClips/poppingsound.mp3"
+dest_files=[ "res://.import/poppingsound.mp3-d0d1b3c6563aa3e9295906375529cc74.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
